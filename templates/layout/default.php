@@ -29,7 +29,7 @@ $cakeDescription = 'Hospital Management System';
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-    <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake']) ?>
+    <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake', 'bootstrap.min']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -38,11 +38,18 @@ $cakeDescription = 'Hospital Management System';
 <body>
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
+            <a href="<?= $this->Url->build('/') ?>"><span>Tadeo</span>Hospital</a>
         </div>
         <div class="top-nav-links">
-            <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
-            <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a>
+            <?= $this->HTML->link(__('Patients'), ['controller' => 'patients', 'action' => 'index']) ?> 
+            <?= $this->HTML->link(__('Doctor'), ['controller' => 'doctors', 'action' => 'index']) ?> 
+            <?= $this->HTML->link(__('Appointments'), ['controller' => 'appointments', 'action' => 'index']) ?> 
+            <?= $this->HTML->link(__('Carriers'), ['controller' => 'carriers', 'action' => 'index']) ?> 
+            <?= $this->HTML->link(__('Invoices'), ['controller' => 'invoices', 'action' => 'index']) ?> 
+        </div>
+        <div class="top-nav-links">
+            <?= $this->HTML->link(__('Manage Users'), ['controller' => 'users', 'action' => 'index']) ?>
+            <?= $this->HTML->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout']) ?>
         </div>
     </nav>
     <main class="main">
