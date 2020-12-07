@@ -10,7 +10,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $name
- * @property int $accpeting_patients
+ * @property bool $accpeting_patients
  * @property \Cake\I18n\FrozenTime $created
  *
  * @property \App\Model\Entity\Appointment[] $appointments

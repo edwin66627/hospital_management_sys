@@ -27,12 +27,12 @@
                     <td><?= $this->Number->format($doctor->id) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Accpeting Patients') ?></th>
-                    <td><?= $this->Number->format($doctor->accpeting_patients) ?></td>
-                </tr>
-                <tr>
                     <th><?= __('Created') ?></th>
                     <td><?= h($doctor->created) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Accpeting Patients') ?></th>
+                    <td><?= $doctor->accpeting_patients ? __('Yes') : __('No'); ?></td>
                 </tr>
             </table>
             <div class="related">

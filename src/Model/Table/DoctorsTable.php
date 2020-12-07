@@ -71,6 +71,7 @@ class DoctorsTable extends Table
             ->notEmptyString('name');
 
         $validator
+            ->boolean('accpeting_patients')
             ->notEmptyString('accpeting_patients');
 
         return $validator;
