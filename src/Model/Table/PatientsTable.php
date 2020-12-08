@@ -74,7 +74,8 @@ class PatientsTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
-            ->integer('name')
+            ->scalar('name')
+            ->maxLength('name', 200)
             ->requirePresence('name', 'create')
             ->notEmptyString('name');
 

@@ -42,7 +42,7 @@ $cakeDescription = 'Hospital Management System';
         </div>
         <div class="top-nav-links">
             <?= $this->HTML->link(__('Patients'), ['controller' => 'patients', 'action' => 'index']) ?> 
-            <?= $this->HTML->link(__('Doctor'), ['controller' => 'doctors', 'action' => 'index']) ?> 
+            <?= $this->HTML->link(__('Doctors'), ['controller' => 'doctors', 'action' => 'index']) ?> 
             <?= $this->HTML->link(__('Appointments'), ['controller' => 'appointments', 'action' => 'index']) ?> 
             <?= $this->HTML->link(__('Carriers'), ['controller' => 'carriers', 'action' => 'index']) ?> 
             <?= $this->HTML->link(__('Invoices'), ['controller' => 'invoices', 'action' => 'index']) ?> 

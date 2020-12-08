@@ -10,12 +10,12 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property int $carrier_id
- * @property int $name
+ * @property string $name
  * @property string $phone
  * @property string $address
  * @property string $city
  * @property string $zipcode
- * @property string $created
+ * @property \Cake\I18n\FrozenTime $created
  *
  * @property \App\Model\Entity\Carrier $carrier
  * @property \App\Model\Entity\Appointment[] $appointments
