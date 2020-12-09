@@ -43,7 +43,6 @@
                         <tr>
                             <th><?= __('Id') ?></th>
                             <th><?= __('Patient Id') ?></th>
-                            <th><?= __('Doctor Id') ?></th>
                             <th><?= __('Appointment Date') ?></th>
                             <th><?= __('Created') ?></th>
                             <th class="actions"><?= __('Actions') ?></th>
@@ -51,8 +50,7 @@
                         <?php foreach ($doctor->appointments as $appointments) : ?>
                         <tr>
                             <td><?= h($appointments->id) ?></td>
-                            <td><?= h($appointments->patient_id) ?></td>
-                            <td><?= h($appointments->doctor_id) ?></td>
+                            <td><?= $this->Format->getName($appointments->patient_id, 'patients') ?></td>
                             <td><?= h($appointments->appointment_date) ?></td>
                             <td><?= h($appointments->created) ?></td>
                             <td class="actions">

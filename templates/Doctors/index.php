@@ -23,7 +23,13 @@
                 <tr>
                     <td><?= $this->Number->format($doctor->id) ?></td>
                     <td><?= h($doctor->name) ?></td>
-                    <td><?= h($doctor->accpeting_patients) ?></td>
+                    <td>
+                        <?php if($doctor->accpeting_patients == 1): ?>
+                            <span style="color: green">Yes</span>
+                        <?php else: ?>
+                            <span style="color: red">No</span>
+                        <?php endif; ?>    
+                    </td>
                     <td><?= h($doctor->created) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $doctor->id]) ?>
